@@ -8,12 +8,10 @@ export function useTodo() {
     if (storedTodos) {
       setTodos(JSON.parse(storedTodos));
     }
-    console.log(`setTodo first ${storedTodos}`);
   }, []);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
-    console.log(`set check ${todos}`);
   }, [todos]);
 
   const addTodo = (text) => {

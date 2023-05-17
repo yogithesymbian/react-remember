@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useTodo } from "../hooks/useTodo";
 
-function TodoForm() {
+function TodoForm({ addTodo }) {
   const [newTodo, setNewTodo] = useState("");
-  const { addTodo } = useTodo();
 
   const handleInputChange = (event) => {
     setNewTodo(event.target.value);
