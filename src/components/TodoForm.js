@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useTodo } from "../hooks/useTodo";
-import TodoList from "./TodoList";
 
 function TodoForm() {
   const [newTodo, setNewTodo] = useState("");
@@ -21,7 +20,6 @@ function TodoForm() {
     <div>
       <input type="text" value={newTodo} onChange={handleInputChange} />
       <button onClick={handleAddTodo}>Add Todo</button>
-      <TodoList />
     </div>
   );
 }
